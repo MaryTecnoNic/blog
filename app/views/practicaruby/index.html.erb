@@ -1,0 +1,70 @@
+<h1>Practicaruby#index</h1>
+<p>Find me in app/views/practicaruby/index.html.erb</p>
+
+<h1>Condicionales</h1>
+
+<h2>CASE</h2>
+<% opcion = 2 %>
+<% case opcion %>
+<% when 1%>
+<p>Servicio al cliente</p>
+<% when 2%>
+<p>Ventas </p>
+<% when 3%>
+<p>Reclamos </p>
+<% end %>
+	
+
+<% es_administrador = true %>
+
+<p>
+<%= 'Soy Usuario comun' unless es_administrador == false%>
+</p>
+
+<p>
+<%= 'Soy administrador' if es_administrador %>
+</p>
+
+<p>
+<% unless es_administrador %>
+	<%= 'Soy un usario comùn :('%>
+<% else %>
+	<%= 'Tengo super poderes :D' %>
+<% end %>
+</p>
+
+<p>
+<% if !es_administrador %>
+	<%= 'Soy un usario comùn :('%>
+<% else %>
+	<%= 'Tengo super poderes :D' %>
+<% end %>
+</p>
+
+<p>
+<% if es_administrador %>
+	<%= 'Tengo super poderes :D' %>
+<% else %>
+	<%= 'Soy un usario comùn :('%>
+<% end %>
+</p>
+
+
+<%= Time.now %>
+
+<%= Date.today %>
+
+<% t = Time.now %>
+
+Año : <%= t.year %>,Mes: <%= t.mon%>, Dia: <%= t.day%>
+
+suma de text: <%= 'Hola ' + 'Mundo' %></p>
+suma: <%= 3+2%>
+
+<% for i in 1..5%>
+<p>Hola Mundo:</p>
+<% end%>
+
+<% for i in 1..5%>
+<p>Hola mundo: <%= i %> </p>
+<% end%>
